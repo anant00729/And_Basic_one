@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--nav bar color-->
+    <color name="colorPrimary">#FFCCBC</color>
+    <!--top bar color-->
+    <color name="colorPrimaryDark">#C8E6C9</color>
+    <!--actiovation color-->
+
+    <color name="colorAccent">#F8BBD0</color>
+
+
+    <color name="one">#FFCDD2</color>
+    <color name="two">#E1BEE7</color>
+    <color name="three">#C5CAE9</color>
+    <color name="four">#BBDEFB</color>
+    <color name="five">#B3E5FC</color>
+    <color name="six">#FFECB3</color>
+    <color name="seven">#B2EBF2</color>
+
+    <!--<array name="rainbow">-->
+        <!--<item></item>-->
+        <!--<item></item>-->
+        <!--<item></item>-->
+        <!--<item></item>-->
+        <!--<item></item>-->
+        <!--<item></item>-->
+        <!--<item></item>-->
+        <!--<item>#FFCCBC</item>-->
+        <!--<item>#C8E6C9</item>-->
+        <!--<item>#B2EBF2</item>-->
+        <!--<item>#D1C4E9</item>-->
+        <!--<item>#F8BBD0</item>-->
+    <!--</array>-->
+</resources>
