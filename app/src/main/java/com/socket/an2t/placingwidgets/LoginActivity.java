@@ -51,27 +51,37 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                // we are getting the values from the user
                 String username = inUsername.getText().toString();
                 String password = inPassword.getText().toString();
 
                 if (!username.isEmpty() && !password.isEmpty()){
                     if (password.equals("123")){
-                        startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+
+
+                        // if u want to navigate to another activity use Intent class
+                        //
+                        Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
+
+                        User user = new User(username,password);
+                        intent.putExtra("user_key" , user);
+
+
+                        startActivity(intent);
                     }else {
-                        showSnackbar("Please enter correct password");
+                        showSnackbar("Please enter correct password",Snackbar.LENGTH_LONG);
                     }
                 }else {
-                    showSnackbar("Please enter yout username and password");
+                    showSnackbar("Please enter yout username and password", Snackbar.LENGTH_SHORT);
                 }
             }
         });
 
     }
 
-    private void showSnackbar(String s) {
+    private void showSnackbar(String s, int SNACK_TYPE) {
         Snackbar snackbar = Snackbar
-                .make(llMainFrame, s, Snackbar.LENGTH_LONG);
+                .make(llMainFrame, s, SNACK_TYPE);
         snackbar.show();
     }
 

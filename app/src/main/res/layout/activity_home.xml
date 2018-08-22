@@ -1,6 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/five"
+    android:gravity="center_vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-</android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_passed_data"
+        android:text="sdkfjksdhfksdhfksh"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+
+</LinearLayout>
