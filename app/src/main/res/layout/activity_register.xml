@@ -1,10 +1,9 @@
-<LinearLayout
-    android:id="@+id/ll_main_frame"
-    android:background="@color/one"
-    android:layout_width="match_parent"
+<LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android">
+
+
 
 
     <ImageView
@@ -38,15 +37,25 @@
         android:layout_height="wrap_content" />
 
 
-    <Button
-        android:id="@+id/btn_login"
-        android:background="@color/four"
-        android:textAllCaps="false"
-        android:textColor="@android:color/white"
-        android:text="@string/submit"
-        android:layout_marginTop="@dimen/margin_v"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/in_f_name"
+        android:hint="@string/f_name"
+        android:background="@color/five"
+        android:layout_marginEnd="@dimen/margin_h"
+        android:layout_marginStart="@dimen/margin_h"
+        android:layout_marginTop="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <EditText
+        android:id="@+id/in_l_name"
+        android:hint="@string/l_name"
+        android:background="@color/five"
+        android:layout_marginEnd="@dimen/margin_h"
+        android:layout_marginStart="@dimen/margin_h"
+        android:layout_marginTop="32dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
 
@@ -55,12 +64,11 @@
         android:background="@color/four"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
-        android:text="@string/click_to_register"
+        android:text="@string/submit"
         android:layout_marginTop="@dimen/margin_v"
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-
 
 
 

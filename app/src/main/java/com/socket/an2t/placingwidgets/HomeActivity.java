@@ -22,13 +22,32 @@ public class HomeActivity extends AppCompatActivity {
 
 
 
-        User mUser = intent.getParcelableExtra("user_key");
+        /*
+
+            //1 . Login
+            //2 . Register
+
+            1.1 username, password
+            2.1 username, password, fName , lName
+
+        */
+        User user_login = intent.getParcelableExtra("user_key");
+        User user_reg = intent.getParcelableExtra("user_key_reg");
 
 
         tvPassedData = findViewById(R.id.tv_passed_data);
 
         // we are just displaying the values that are passed from the previose activity
-        tvPassedData.setText("Username : " + mUser.username + "\n Password : " + mUser.password);
+        if(user_login != null){
+            //1.1 username, password
+            tvPassedData.setText("Username : " + user_login.username + "\n Password : " + user_login.password);
+        }else if(user_reg != null){
+            //2.1 username, password, fName , lName
+            tvPassedData.setText("Username : " + user_reg.username + "\n Password : " + user_reg.password +
+                    "\nFName : " + user_reg.fName+ "\n LName : " + user_reg.lName
+                );
+        }
+
 
 
     }

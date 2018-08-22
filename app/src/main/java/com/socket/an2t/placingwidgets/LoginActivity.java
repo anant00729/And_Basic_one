@@ -23,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
     //private Button
 
     private Button btnLogin;
+    private Button btnReg;
     private EditText inUsername;
     private EditText inPassword;
 
@@ -44,6 +45,8 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         btnLogin = findViewById(R.id.btn_login);
+        btnReg = findViewById(R.id.btn_reg);
+
         inUsername = findViewById(R.id.in_username);
         inPassword = findViewById(R.id.in_password);
         llMainFrame = findViewById(R.id.ll_main_frame);
@@ -74,6 +77,15 @@ public class LoginActivity extends AppCompatActivity {
                 }else {
                     showSnackbar("Please enter yout username and password", Snackbar.LENGTH_SHORT);
                 }
+            }
+        });
+
+
+        btnReg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
             }
         });
 
