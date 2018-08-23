@@ -24,14 +24,9 @@ public class LoginPresenter  {
 
         if (!username.isEmpty() && !password.isEmpty()) {
             if (password.equals("123")) {
-
                 this.mPresenter.onLoginSuccess(username,password);
-
             } else {
-
                 mPresenter.onError("Please enter correct password");
-
-
             }
         } else {
 

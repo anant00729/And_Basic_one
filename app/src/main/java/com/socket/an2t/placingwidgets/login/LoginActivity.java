@@ -1,5 +1,6 @@
 package com.socket.an2t.placingwidgets.login;
 
+import android.app.ListActivity;
 import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -17,7 +18,7 @@ import com.socket.an2t.placingwidgets.login.callback.LoginPresenterImplementatio
 import com.socket.an2t.placingwidgets.register.RegisterActivity;
 import com.socket.an2t.placingwidgets.models.User;
 
-public class LoginActivity extends AppCompatActivity implements LoginPresenterImplementation{
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener,LoginPresenterImplementation{
 
     // logt
     private static final String TAG = "LoginActivity";
@@ -57,38 +58,10 @@ public class LoginActivity extends AppCompatActivity implements LoginPresenterIm
         llMainFrame = findViewById(R.id.ll_main_frame);
 
 
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // we are getting the values from the user
-                String username = inUsername.getText().toString();
-                String password = inPassword.getText().toString();
-                LoginPresenter lp = new LoginPresenter(LoginActivity.this);
-                lp.checkLoginCredendials(username,password);
-            }
-        });
 
-
-
-
-
-        btnReg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        btn_show_list.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                Intent intent = new Intent(LoginActivity.this, ListActivity.class);
-//                startActivity(intent);
-            }
-        });
-
-
+        btn_show_list.setOnClickListener(this);
+        btnReg.setOnClickListener(this);
+        btn_show_list.setOnClickListener(this);
 
   }
 
@@ -97,8 +70,30 @@ public class LoginActivity extends AppCompatActivity implements LoginPresenterIm
         Snackbar snackbar = Snackbar
                 .make(llMainFrame, s, SNACK_TYPE);
         snackbar.show();
+    }
 
 
+
+    @Override
+    public void onClick(View v) {
+        Intent intent;
+        switch (v.getId()){
+            case R.id.btn_login:
+                // we are getting the values from the user
+                String username = inUsername.getText().toString();
+                String password = inPassword.getText().toString();
+                LoginPresenter lp = new LoginPresenter(LoginActivity.this);
+                lp.checkLoginCredendials(username,password);
+                break;
+            case R.id.btn_reg:
+                intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_show_list:
+                intent = new Intent(LoginActivity.this, ListActivity.class);
+                startActivity(intent);
+                break;
+        }
     }
 
     @Override
@@ -107,12 +102,10 @@ public class LoginActivity extends AppCompatActivity implements LoginPresenterIm
         User user = new User(userName, password);
         intent.putExtra("user_key", user);
         startActivity(intent);
-
     }
 
     @Override
     public void onError(String message) {
         showSnackbar(message, Snackbar.LENGTH_SHORT);
     }
-
 }
