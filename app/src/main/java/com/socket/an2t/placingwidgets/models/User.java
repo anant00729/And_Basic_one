@@ -1,4 +1,4 @@
-package com.socket.an2t.placingwidgets;
+package com.socket.an2t.placingwidgets.models;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -22,6 +22,11 @@ public class User implements Parcelable {
         this.password = pass;
         this.fName = f_name;
         this.lName = l_name;
+    }
+
+    public String getFulltName(String fName , String lName){
+        String full_name = fName + " " + lName;
+        return full_name;
     }
 
 

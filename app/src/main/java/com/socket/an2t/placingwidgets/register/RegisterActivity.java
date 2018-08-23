@@ -1,4 +1,4 @@
-package com.socket.an2t.placingwidgets;
+package com.socket.an2t.placingwidgets.register;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.socket.an2t.placingwidgets.home.HomeActivity;
+import com.socket.an2t.placingwidgets.R;
+import com.socket.an2t.placingwidgets.models.User;
 
 
 public class RegisterActivity extends AppCompatActivity {

@@ -1,10 +1,13 @@
-package com.socket.an2t.placingwidgets;
+package com.socket.an2t.placingwidgets.home;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+
+import com.socket.an2t.placingwidgets.R;
+import com.socket.an2t.placingwidgets.models.User;
 
 
 public class HomeActivity extends AppCompatActivity {
