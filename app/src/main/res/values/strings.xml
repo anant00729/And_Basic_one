@@ -8,4 +8,10 @@
     <string name="l_name">Last Name</string>
     <string name="click_to_register">Click to register</string>
     <string name="show_list">Show List Page</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add">add</string>
+    <string name="remove">remove</string>
+    <string name="type_here">Type here....</string>
 </resources>
