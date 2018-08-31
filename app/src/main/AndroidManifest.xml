@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.socket.an2t.placingwidgets">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,11 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".home.HomeActivity" />
-        <activity android:name=".login.LoginActivity">
-
-        </activity>
+        <activity android:name=".login.LoginActivity"></activity>
         <activity android:name=".register.RegisterActivity" />
         <activity android:name=".fragmentsCommunication.FragBaseActivity">
+
+        </activity>
+        <activity android:name=".recyclerView.ListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
